@@ -1,0 +1,511 @@
+*,
+*:focus {
+    outline: none !important;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.pad-rl-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pad-rt-0 {
+    padding-right: 0;
+}
+
+.pad-lt-0 {
+    padding-left: 0;
+}
+
+
+/*--  Roboto Fonts  --*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/roboto/roboto.eot");
+    src: url("../fonts/roboto/roboto.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/roboto.woff") format("woff"), url("../fonts/roboto/roboto.ttf") format("truetype"), url("../fonts/roboto/roboto.svg#svgFontName") format("svg");
+}
+
+
+/*--  Roboto Bold Fonts  --*/
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url("../fonts/roboto-bold/roboto-bold.eot");
+    src: url("../fonts/roboto-bold/roboto-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-bold/roboto-bold.woff") format("woff"), url("../fonts/roboto-bold/roboto-bold.ttf") format("truetype"), url("../fonts/roboto-bold/roboto-bold.svg#svgFontName") format("svg");
+}
+
+
+/*--  Roboto Light Fonts  --*/
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url("../fonts/roboto-light/roboto-light.eot");
+    src: url("../fonts/roboto-light/roboto-light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light/roboto-light.woff") format("woff"), url("../fonts/roboto-light/roboto-light.ttf") format("truetype"), url("../fonts/roboto-light/roboto-light.svg#svgFontName") format("svg");
+}
+
+
+/*--  Roboto Light Italic Fonts  --*/
+
+@font-face {
+    font-family: 'Roboto Light Italic';
+    src: url("../fonts/roboto-light-italic/roboto-light-italic.eot");
+    src: url("../fonts/roboto-light-italic/roboto-light-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light-italic/roboto-light-italic.woff") format("woff"), url("../fonts/roboto-light-italic/roboto-light-italic.ttf") format("truetype"), url("../fonts/roboto-light-italic/roboto-light-italic.svg#svgFontName") format("svg");
+}
+
+
+/*--  Roboto Regular Fonts  --*/
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url("../fonts/roboto-regular/roboto-regular.eot");
+    src: url("../fonts/roboto-regular/roboto-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular/roboto-regular.woff") format("woff"), url("../fonts/roboto-medium/roboto-regular.ttf") format("truetype"), url("../fonts/roboto-regular/roboto-regular.svg#svgFontName") format("svg");
+}
+
+
+/*--  Roboto Medium Fonts  --*/
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url("../fonts/roboto-medium/roboto-medium.eot");
+    src: url("../fonts/roboto-medium/roboto-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-medium/roboto-medium.woff") format("woff"), url("../fonts/roboto-medium/roboto-medium.ttf") format("truetype"), url("../fonts/roboto-medium/roboto-medium.svg#svgFontName") format("svg");
+}
+
+
+/*--  Francois One Regular Fonts  --*/
+
+@font-face {
+    font-family: 'Francois One Regular';
+    src: url("../fonts/francoisone-regular/francoisone-regular.eot");
+    src: url("../fonts/francoisone-regular/francoisone-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/francoisone-regular/francoisone-regular.woff") format("woff"), url("../fonts/francoisone-regular/francoisone-regular.ttf") format("truetype"), url("../fonts/francoisone-regular/francoisone-regular.svg#svgFontName") format("svg");
+}
+
+
+/*--  Linear Icons Fonts  --*/
+
+@font-face {
+    font-family: 'Linearicons-Free';
+    src: url('../fonts/Linearicons-Free.eot?w118d');
+    src: url('../fonts/Linearicons-Free.eot?#iefixw118d') format('embedded-opentype'), url('../fonts/Linearicons-Free.woff2?w118d') format('woff2'), url('../fonts/Linearicons-Free.woff?w118d') format('woff'), url('../fonts/Linearicons-Free.ttf?w118d') format('truetype'), url('../fonts/Linearicons-Free.svg?w118d#Linearicons-Free') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto';
+    color: $accent-black;
+}
+
+
+/*--  Custom Checkbox Styles  --*/
+
+.custom-check {
+    /*margin-bottom: 5px;*/
+    label {
+        &.checkbox-inline {
+            input[type="checkbox"] {
+                display: none;
+                &:checked {
+                    +span {
+                        background-color: $checkbox-color;
+                        border: 2px solid $checkbox-color;
+                        padding: 3px;
+                        @include border-radius(2px);
+                        @include transition(all 0.3s ease-in-out);
+                        i {
+                            opacity: 1;
+                        }
+                    }
+                }
+                +span {
+                    background-color: $white;
+                    border: 2px solid $black-6;
+                    cursor: pointer;
+                    display: inline-block;
+                    height: 18px;
+                    line-height: 14px;
+                    margin: -1px 10px 0 0;
+                    padding: 3px;
+                    position: relative;
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 18px;
+                    margin-right: 10px;
+                    @include border-radius(2px);
+                    @include transition(all 0.3s ease-in-out);
+                    i {
+                        color: $black-6;
+                        display: block;
+                        font-size: 13px;
+                        font-weight: 400;
+                        left: -3px;
+                        margin: -4px auto;
+                        opacity: 0;
+                        overflow: visible;
+                        position: relative;
+                        width: 10px;
+                        @include transition(all 0.3s ease-in-out);
+                        img {
+                            width: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .checkbox-inline {
+        padding-left: 0;
+    }
+}
+
+
+/*--  Custom Radio Styles  --*/
+
+.custom-radio {
+    margin-bottom: 5px;
+    label {
+        &.radio-inline {
+            input[type="radio"] {
+                display: none;
+                &:checked {
+                    +span {
+                        background-color: $white;
+                        border: 1px solid $black;
+                        padding: 3px;
+                        @include border-radius(0);
+                        @include transition(all 0.3s ease-in-out);
+                        i {
+                            opacity: 1;
+                        }
+                    }
+                }
+                +span {
+                    background-color: $white;
+                    border: 1px solid $custom-check-border;
+                    cursor: pointer;
+                    display: inline-block;
+                    height: 18px;
+                    line-height: 14px;
+                    margin: -1px 10px 0 0;
+                    padding: 3px;
+                    position: relative;
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 18px;
+                    margin-right: 10px;
+                    @include border-radius(0);
+                    @include transition(all 0.3s ease-in-out);
+                    i {
+                        color: $black;
+                        display: block;
+                        font-size: 10px;
+                        font-weight: 400;
+                        left: -1px;
+                        margin: -4px auto;
+                        opacity: 0;
+                        overflow: visible;
+                        position: relative;
+                        top: 2px;
+                        width: 10px;
+                        @include transition(all 0.3s ease-in-out);
+                    }
+                }
+            }
+        }
+    }
+    .radio-inline {
+        padding-left: 0;
+    }
+}
+
+.mar0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.img-placeholder {
+    @include square(40px);
+    @include border-radius(50%);
+    color: $white;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    background-color: $save-bg-color;
+}
+
+
+/* TEST HEADER */
+
+.test-header {
+    height: 70px;
+    width: 100%;
+    .content-wrapper-pills {
+        height: 70px;
+        margin: 0;
+        padding: 0;
+        >li {
+            width: 1%;
+            display: table-cell;
+            padding: 4px 15px;
+            text-align: center;
+            &.active {
+                a {
+                    background-color: transparent;
+                    &:after {
+                        background-color: $sidebar;
+                    }
+                }
+            }
+            a {
+                padding: 0;
+                margin: 0;
+                color: $sidebar;
+                position: relative;
+                display: inline-block;
+                line-height: 10px;
+                text-align: center;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $sidebar;
+                    background-color: transparent;
+                    text-decoration: none;
+                }
+                &:after {
+                    width: 100%;
+                    height: 4px;
+                    margin: 0 auto;
+                    content: "";
+                    display: block;
+                    min-width: 62px;
+                    max-width: 62px;
+                    margin-top: 6px;
+                    background-color: transparent;
+                    @include transition(background-color 0.3s ease-in-out);
+                    @include border-radius(4px);
+                }
+                >img {
+                    display: block;
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+}
+
+
+/*--  Custom Checkbox Styles  --*/
+
+.custom-table-check {
+    /*margin-bottom: 5px;*/
+    label {
+        &.checkbox-inline {
+            input[type="checkbox"] {
+                display: none;
+                &:checked {
+                    +span {
+                        padding: 3px;
+                        @include transition(all 0.3s ease-in-out);
+                        i {
+                            opacity: 1;
+                        }
+                    }
+                }
+                +span {
+                    background-color: $white;
+                    border: 1px solid $black-6;
+                    cursor: pointer;
+                    display: inline-block;
+                    height: 16px;
+                    line-height: 14px;
+                    margin: -1px 10px 0 0;
+                    padding: 3px;
+                    position: relative;
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 16px;
+                    margin-right: 10px;
+                    @include border-radius(2px);
+                    @include transition(all 0.3s ease-in-out);
+                    @include box-shadow(inset 0 0 1px $black);
+                    i {
+                        color: $black-6;
+                        display: block;
+                        font-size: 13px;
+                        font-weight: 400;
+                        left: -1px;
+                        top: -1px;
+                        margin: -4px auto;
+                        opacity: 0;
+                        overflow: visible;
+                        position: relative;
+                        width: 10px;
+                        @include transition(all 0.3s ease-in-out);
+                        img {
+                            width: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .checkbox-inline {
+        padding-left: 0;
+    }
+}
+
+
+/* TABLE COLORS*/
+
+.os-green {
+    color: $os-green !important;
+}
+
+.bench-red {
+    color: $login-red !important;
+}
+
+.functional-orange {
+    color: $functional-orange !important;
+}
+
+.mar0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.pad0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/*   TABLE WRAPPER   */
+
+.table-wrapper {
+    .custom-table-view {
+        &.table-header {
+            background-color: $login-red;
+            .col-xs-1 {
+                .custom-table-check {
+                    padding: 25px 0px 25px 12px;
+                }
+            }
+            .table-column {
+                color: $white;
+                border: 0;
+                overflow: hidden;
+                font-size: 14px;
+                white-space: nowrap;
+                line-height: 71px;
+                font-family: 'Roboto';
+                text-overflow: ellipsis;
+            }
+        }
+        &.table-body {
+            .row {
+                .col-xs-1 {
+                    .custom-table-check {
+                        padding: 18px 0px 18px 12px;
+                    }
+                }
+                .table-column {
+                    color: $table-colr;
+                    border: 0;
+                    overflow: hidden;
+                    font-size: 14px;
+                    font-family: 'Roboto';
+                    white-space: nowrap;
+                    line-height: 60px;
+                    text-overflow: ellipsis;
+                }
+            }
+            &:hover {
+                border-color: $light-gray-7;
+                background-color: $hover-fill;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {}
+
+@media(min-width: 320px) and (max-width: 767px) {
+    .table-wrapper {
+        padding: 0;
+        .custom-table-view {
+            &:first-of-type {
+                .custom-table-check {
+                    margin-top: 8px;
+                    padding: 0 !important;
+                }
+            }
+            &.table-header {
+                border: 0;
+                padding: 9px 0px;
+                background-color: $light-gray-3;
+                .custom-check {
+                    span {
+                        /*background-color: #ebebeb;*/
+                    }
+                }
+            }
+            &.table-body {
+                border: 0;
+                .mobile-view-content {
+                    height: 80px;
+                    padding: 5px 10px;
+                    position: relative;
+                    margin-bottom: 6px;
+                    background-color: $white;
+                    @include box-shadow(rgba(0,
+                    0,
+                    0,
+                    0.5) 0px 1px 2px 0);
+                    .custom-table-check {
+                        top: 48%;
+                        left: 10px;
+                        position: absolute;
+                        transform: translateY(-50%);
+                    }
+                    a {
+                        display: block;
+                        position: relative;
+                        &:active,
+                        &:hover,
+                        &:focus {
+                            text-decoration: none;
+                        }
+                        >img {
+                            top: 50%;
+                            left: 0;
+                            position: absolute;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+                &:hover {
+                    border-color: transparent;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 481px) and (max-width: 767px) {}
+
+@media(min-width: 320px) and (max-width: 480px) {}

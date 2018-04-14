@@ -1,0 +1,97 @@
+.sidebar-wrapper {
+    top: 50%;
+    left: 0;
+    z-index: 9;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #36404e;
+    border-left: 0;
+    .tabs-section {
+        ul {
+            padding: 0;
+            border: 0;
+            li {
+                float: none;
+                margin: 0;
+                &:not(:last-child) {
+                    a {
+                        border-bottom: 1px solid #283c45 !important;
+                    }
+                }
+                a {
+                    padding: 12px;
+                    text-align: center;
+                    -webkit-border-radius: 0;
+                    -moz-border-radius: 0;
+                    -ms-border-radius: 0;
+                    border-radius: 0;
+                    -webkit-transition: all .3s ease-in-out;
+                    -o-transition: all .3s ease-in-out;
+                    transition: all .3s ease-in-out;
+                    font-size: 11px;
+                    color: #8d8d8d;
+                    background-color: transparent;
+                    font-family: "Roboto Medium", sans-serif;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-right: 0;
+                    border: 0;
+                    &:hover {
+                        border-color: transparent;
+                        color: #4294D9;
+                    }
+                    i {
+                        font-size: 21px;
+                        line-height: 21px;
+                        display: block;
+                    }
+                    span {
+                        position: absolute;
+                        text-align: left;
+                        left: -136px;
+                        transition: left 0.3s ease-in-out; // background-color: rgba(30, 47, 55, 0.95);
+                        background-color: rgba(255, 255, 255, 0.95);
+                        padding: 14px 10px 14px;
+                        bottom: -1px;
+                        line-height: 17px;
+                        display: block;
+                        white-space: nowrap;
+                        width: 135px;
+                        height: 47px;
+                        font-size: 10px;
+                        font-family: "Roboto Regular";
+                        border: 1px solid #283c45 !important;
+                        z-index: -1;
+                        border-left: 0 !important;
+                        margin-left: 0px;
+                    }
+                }
+                &:first-child {
+                    a {
+                        // margin-top: -1px;
+                    }
+                }
+            }
+            li.active {
+                a {
+                    color: #4294D9;
+                    background-color: transparent;
+                    &:hover,
+                    &:focus {
+                        border: 0;
+                    }
+                }
+            }
+            &:hover {
+                li {
+                    a {
+                        span {
+                            left: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
